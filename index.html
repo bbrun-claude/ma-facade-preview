@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.A Fa&ccedil;ade — Ravalement, Peinture &amp; Nettoyage | Gu&eacute;rande (44)</title>
+<meta name="description" content="M.A Fa&ccedil;ade, artisan fa&ccedil;adier &agrave; Gu&eacute;rande. Ravalement de fa&ccedil;ade, peinture, d&eacute;moussage de toiture et nettoyage. Plus de 15 ans d'exp&eacute;rience. Devis gratuit en Loire-Atlantique.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#2c5fa1;--blue-dark:#1e4578;--blue-light:#e8f0fa;--orange:#e67e22;--orange-dark:#c96a15;--orange-light:#fdf3e7;--gray-dark:#2c2c2c;--gray:#555;--gray-light:#f5f6f8;--white:#fff}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--gray-dark);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-logo img{height:55px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--gray);transition:color .2s;text-transform:uppercase;letter-spacing:0.5px}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{background:var(--orange);color:var(--white)!important;padding:10px 22px;border-radius:4px;font-weight:600;transition:background .2s}
+.nav-cta:hover{background:var(--orange-dark)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.burger span{width:24px;height:2px;background:var(--gray-dark);transition:all .3s}
+
+.hero{margin-top:70px;position:relative;height:75vh;min-height:500px;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:url('https://ma-facade.e-monsite.com/medias/images/peinture.jpg') center/cover;filter:brightness(0.4)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px;color:var(--white)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(44,95,161,0.9);padding:8px 18px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px}
+.hero h1{font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.1;margin-bottom:16px;max-width:700px}
+.hero p{font-size:clamp(16px,2vw,20px);max-width:550px;opacity:0.9;margin-bottom:32px;line-height:1.5}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-weight:600;font-size:15px;transition:all .2s;cursor:pointer;border:none}
+.btn-orange{background:var(--orange);color:var(--white)}
+.btn-orange:hover{background:var(--orange-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.5)}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.1)}
+
+.section{padding:80px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-title{font-size:clamp(26px,3vw,38px);font-weight:700;margin-bottom:12px}
+.section-sub{font-size:17px;color:var(--gray);max-width:600px;margin-bottom:48px}
+.section-label{font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.bg-light{background:var(--gray-light)}
+.bg-blue{background:var(--blue-light)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12)}
+.about-img img{width:100%;height:400px;object-fit:cover;display:block}
+.about-text h3{font-size:24px;margin-bottom:16px}
+.about-text p{color:var(--gray);margin-bottom:16px;font-size:15px}
+.about-highlights{display:flex;gap:32px;margin-top:24px}
+.highlight{text-align:center}
+.highlight .num{font-size:36px;font-weight:700;color:var(--blue);line-height:1}
+.highlight .label{font-size:13px;color:var(--gray);margin-top:4px}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:8px;padding:32px 28px;box-shadow:0 4px 20px rgba(0,0,0,0.06);transition:all .3s;border-bottom:3px solid transparent}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);border-bottom-color:var(--orange)}
+.service-icon{width:48px;height:48px;background:var(--orange-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px}
+.service-card h3{font-size:18px;margin-bottom:8px;font-weight:600}
+.service-card p{font-size:14px;color:var(--gray);line-height:1.6}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-item{border-radius:8px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.05)}
+
+.cta-section{background:var(--blue);color:var(--white);text-align:center;padding:80px 24px}
+.cta-section h2{font-size:clamp(26px,3vw,38px);margin-bottom:16px}
+.cta-section p{font-size:17px;opacity:0.8;max-width:600px;margin:0 auto 32px}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-icon{width:44px;height:44px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-item h4{font-size:15px;font-weight:600;margin-bottom:2px}
+.contact-item p{font-size:14px;color:var(--gray)}
+.contact-map{border-radius:8px;overflow:hidden;min-height:350px}
+.contact-map iframe{width:100%;height:100%;border:0;min-height:350px}
+
+.footer{background:var(--gray-dark);color:rgba(255,255,255,0.6);padding:32px 24px;text-align:center;font-size:13px}
+.footer a{color:var(--orange);transition:opacity .2s}
+
+@media(max-width:768px){
+.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+.nav-links.open{display:flex}
+.burger{display:flex}
+.hero{height:60vh;min-height:400px}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+.services-grid{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr 1fr}
+.hero-btns{flex-direction:column}
+.btn{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="#" class="nav-logo"><img src="https://ma-facade.e-monsite.com/medias/site/logos/mafacade-removebg-preview.png" alt="M.A Fa&ccedil;ade"></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#about">L'entreprise</a></li>
+<li><a href="#services">Prestations</a></li>
+<li><a href="#realisations">R&eacute;alisations</a></li>
+<li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
+</ul>
+<div class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<div class="hero-badge">&#9733; Plus de 15 ans d'exp&eacute;rience</div>
+<h1>Ravalement de fa&ccedil;ade &amp; peinture &agrave; Gu&eacute;rande</h1>
+<p>M.A Fa&ccedil;ade, artisan sp&eacute;cialiste du ravalement, de la peinture ext&eacute;rieure et du nettoyage de toiture. Devis gratuit en Loire-Atlantique et Morbihan.</p>
+<div class="hero-btns">
+<a href="tel:0609041593" class="btn btn-orange">06 09 04 15 93</a>
+<a href="#realisations" class="btn btn-outline">Avant / Apr&egrave;s</a>
+</div>
+</div>
+</section>
+
+<section class="section bg-blue" id="about">
+<div class="section-inner">
+<div class="about-grid">
+<div class="about-img">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-04-06.jpg" alt="R&eacute;alisation M.A Fa&ccedil;ade">
+</div>
+<div class="about-text">
+<p class="section-label">L'entreprise</p>
+<h3>Artisan fa&ccedil;adier depuis plus de 15 ans</h3>
+<p>Bas&eacute;e &agrave; Gu&eacute;rande en Loire-Atlantique, M.A Fa&ccedil;ade est une entreprise artisanale sp&eacute;cialis&eacute;e dans le ravalement de fa&ccedil;ade, la peinture ext&eacute;rieure et le nettoyage de toiture. Nous intervenons chez les particuliers sur toute la presqu'&icirc;le gu&eacute;randaise et au-del&agrave;.</p>
+<p>Notre exp&eacute;rience de plus de 15 ans nous permet de vous proposer des prestations de qualit&eacute;, du diagnostic &agrave; la finition, avec un r&eacute;sultat visible d&egrave;s la premi&egrave;re intervention.</p>
+<div class="about-highlights">
+<div class="highlight"><div class="num">15+</div><div class="label">ans d'exp&eacute;rience</div></div>
+<div class="highlight"><div class="num">44</div><div class="label">Loire-Atlantique</div></div>
+<div class="highlight"><div class="num">6/7</div><div class="label">jours d'intervention</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="section-inner">
+<p class="section-label">Nos prestations</p>
+<h2 class="section-title">Ce que nous faisons</h2>
+<p class="section-sub">Du ravalement complet au simple nettoyage, nous prenons soin de vos fa&ccedil;ades et de vos toitures.</p>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">&#9632;</div>
+<h3>Ravalement de fa&ccedil;ade</h3>
+<p>Nettoyage, r&eacute;paration des fissures, enduit et mise en peinture de vos fa&ccedil;ades. Redonner un coup de neuf &agrave; votre maison.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">&#9670;</div>
+<h3>Peinture ext&eacute;rieure</h3>
+<p>Peinture de fa&ccedil;ade, volets, cl&ocirc;tures et menuiseries ext&eacute;rieures. Protection durable et esth&eacute;tique renouvel&eacute;e.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">&#9650;</div>
+<h3>D&eacute;moussage toiture</h3>
+<p>Traitement anti-mousse, nettoyage de toiture et application de produit hydrofuge. Prolongez la dur&eacute;e de vie de votre couverture.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">&#9679;</div>
+<h3>Nettoyage haute pression</h3>
+<p>Nettoyage de fa&ccedil;ades, terrasses, all&eacute;es et murs. &Eacute;limination des salissures, mousses et traces d'humidit&eacute;.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">&#9644;</div>
+<h3>Traitement hydrofuge</h3>
+<p>Application de produits hydrofuges sur fa&ccedil;ades et toitures. Protection contre l'humidit&eacute; et les intemp&eacute;ries pour plusieurs ann&eacute;es.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">&#9881;</div>
+<h3>R&eacute;paration &amp; enduits</h3>
+<p>Rebouchage de fissures, reprise d'enduit, r&eacute;paration de joints et traitement des probl&egrave;mes d'humidit&eacute;.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="realisations">
+<div class="section-inner">
+<p class="section-label">R&eacute;alisations</p>
+<h2 class="section-title">Avant / Apr&egrave;s</h2>
+<p class="section-sub">Le r&eacute;sultat parle de lui-m&ecirc;me. Quelques exemples de nos interventions r&eacute;centes.</p>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-03-41.jpg" alt="Nettoyage fa&ccedil;ade avant/apr&egrave;s" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-06-34.jpg" alt="Ravalement de fa&ccedil;ade" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-06-33.jpg" alt="Peinture ext&eacute;rieure" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-06-33-2.jpg" alt="Nettoyage toiture" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-06-34-5.jpg" alt="Traitement fa&ccedil;ade" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="https://ma-facade.e-monsite.com/medias/album/photo-2023-07-25-16-06-34-4.jpg" alt="R&eacute;novation ext&eacute;rieure" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>Votre fa&ccedil;ade m&eacute;rite un coup de neuf ?</h2>
+<p>Contactez-nous pour un devis gratuit et sans engagement. Intervention rapide sur Gu&eacute;rande, La Baule, Saint-Nazaire et environs.</p>
+<a href="tel:0609041593" class="btn btn-orange">Appeler le 06 09 04 15 93</a>
+</section>
+
+<section class="section" id="contact">
+<div class="section-inner">
+<p class="section-label">Contact</p>
+<h2 class="section-title">Demander un devis</h2>
+<p class="section-sub">Devis gratuit, d&eacute;placement et conseils inclus.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">&#9742;</div>
+<div><h4>T&eacute;l&eacute;phone</h4><p><a href="tel:0609041593">06 09 04 15 93</a></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">&#9993;</div>
+<div><h4>Email</h4><p><a href="mailto:mche.antoine@gmail.com">mche.antoine@gmail.com</a></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">&#9873;</div>
+<div><h4>Adresse</h4><p>1 Bis impasse de Kerbignon<br>44350 Gu&eacute;rande</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">&#9881;</div>
+<div><h4>Zone d'intervention</h4><p>Gu&eacute;rande, La Baule, Le Pouliguen, Le Croisic, Saint-Nazaire, Herbignac et toute la presqu'&icirc;le gu&eacute;randaise</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">&#128337;</div>
+<div><h4>Horaires</h4><p>Lundi &mdash; Samedi : 8h30 &agrave; 19h</p></div>
+</div>
+</div>
+<div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700!2d-2.43!3d47.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1+Bis+impasse+de+Kerbignon%2C+44350+Gu%C3%A9rande!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<p>&copy; 2026 M.A Fa&ccedil;ade — Ravalement &amp; peinture &agrave; Gu&eacute;rande (44) — <a href="tel:0609041593">06 09 04 15 93</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth'});document.getElementById('navLinks').classList.remove('open')}})});
+</script>
+</body>
+</html>
